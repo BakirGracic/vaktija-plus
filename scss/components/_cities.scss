@@ -1,0 +1,33 @@
+.cities {
+   transition: transform 175ms ease-in-out;
+   transform: translateX(-100%);
+   position: fixed;
+   top: 55px;
+   left: 0;
+   bottom: 0;
+   width: 320px;
+   background-color: #222222;
+   overflow-y: scroll;
+   input {
+      font-family: inherit;
+      font-size: .9rem;
+      color: #989a13;
+      margin: .25rem .5rem;
+      width: 275px;
+      padding: .5rem;
+      border-radius: .2rem;
+      background-color: #444444;
+   }
+   input::placeholder {
+      color: #e0e0e0;
+      opacity: 1;
+   }
+   input::selection {
+      color: #e0e0e0;
+   }
+   p {
+      cursor: pointer;
+      font-weight: 300;
+      padding: .15rem .5rem;
+   }
+}

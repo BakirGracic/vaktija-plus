@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bs-BA" translate="no">
+<head>
+   <!-- Meta -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- SEO -->
+   <meta name="author" content="bakir_gracic@outlook.com">
+   <meta name="description" content="Vaktija za gradove Bosne i Hercegovine i Sandžaka - zora, izlazak sunca, podne, ikindija, akšam i jacija">
+   <meta name="keywords" content="vaktija, islam, muslim pro, vaktija.ba, app, pwa, date, religija, vakat, namaz, vrijeme, bosna, sandzak, regija, kibla, sabah, zora, podne, ikindija, aksam, jacija, salat, dzuma, sehur, takvim, teravija, iftar, svitanje, politika privatnosti, obavijest">
+   <!-- Title -->
+   <title>Vaktija | BiH i Sandžak</title>
+   <!-- Open Graph Metadata -->
+   <meta property="og:title" content="Vaktija | BiH i Sandžak">
+   <meta property="og:description" content="Vaktija za gradove Bosne i Hercegovine i Sandžaka - zora, izlazak sunca, podne, ikindija, akšam i jacija">
+   <meta property="og:type" content="website">
+   <meta property="og:image" content="img/banner.jpg">
+   <meta property="og:url" content="https://bakirgracic.github.io/vaktija/">
+   <meta property="og:locale" content="bs_BA">
+   <!-- Favicons -->
+   <link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+   <link rel="mask-icon" href="img/icon.png">
+   <link rel="apple-touch-icon" href="img/icon.png">
+   <link rel="apple-touch-startup-image" href="img/icon.png">
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/fontface.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Google Analytics -->
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-07R8N76Z89"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-07R8N76Z89');
+   </script>
+</head>
+<body>
+
+   <!-- Preloader -->
+   <div class="preloader">
+      <!-- Loading IO Spinner -->
+      <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+   </div>
+
+   <!-- Navigation -->
+   <nav>
+      <div class="max-width no-select">
+         <div class="col1">
+            <svg viewBox="0 0 16 16" id="cities-modal-btn">
+               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+            </svg>
+         </div>
+         <div class="col2" onclick="location.reload()">
+            <p>Vaktija<img src="img/favicon.png" alt="vaktija-logo"></p>
+         </div>
+         <div class="col3">
+            <p id="nav-clock">--:--</p>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Cities Modal -->
+   <div class="cities no-select" id="cities-modal">
+      <input type="text" placeholder="Pretraga..." id="cities-modal-searchbox">
+      <p onclick="getAPI(0)">Banovići</p>
+      <p onclick="getAPI(1)">Banja Luka</p>
+      <p onclick="getAPI(2)">Bihać</p>
+      <p onclick="getAPI(3)">Bijeljina</p>
+      <p onclick="getAPI(4)">Bileća</p>
+      <p onclick="getAPI(5)">Bosanski Brod</p>
+      <p onclick="getAPI(6)">Bosanska Dubica</p>
+      <p onclick="getAPI(7)">Bosanska Gradiška</p>
+      <p onclick="getAPI(8)">Bosansko Grahovo</p>
+      <p onclick="getAPI(9)">Bosanska Krupa</p>
+      <p onclick="getAPI(10)">Bosanski Novi</p>
+      <p onclick="getAPI(11)">Bosanski Petrovac</p>
+      <p onclick="getAPI(12)">Bosanski Šamac</p>
+      <p onclick="getAPI(13)">Bratunac</p>
+      <p onclick="getAPI(14)">Brčko</p>
+      <p onclick="getAPI(15)">Breza</p>
+      <p onclick="getAPI(16)">Bugojno</p>
+      <p onclick="getAPI(17)">Busovača</p>
+      <p onclick="getAPI(18)">Bužim</p>
+      <p onclick="getAPI(19)">Cazin</p>
+      <p onclick="getAPI(20)">Čajniče</p>
+      <p onclick="getAPI(21)">Čapljina</p>
+      <p onclick="getAPI(22)">Čelić</p>
+      <p onclick="getAPI(23)">Čelinac</p>
+      <p onclick="getAPI(24)">Čitluk</p>
+      <p onclick="getAPI(25)">Derventa</p>
+      <p onclick="getAPI(26)">Doboj</p>
+      <p onclick="getAPI(27)">Donji Vakuf</p>
+      <p onclick="getAPI(28)">Drvar</p>
+      <p onclick="getAPI(29)">Foča</p>
+      <p onclick="getAPI(30)">Fojnica</p>
+      <p onclick="getAPI(31)">Gacko</p>
+      <p onclick="getAPI(32)">Glamoč</p>
+      <p onclick="getAPI(33)">Goražde</p>
+      <p onclick="getAPI(34)">Gornji Vakuf</p>
+      <p onclick="getAPI(35)">Gračanica</p>
+      <p onclick="getAPI(36)">Gradačac</p>
+      <p onclick="getAPI(37)">Grude</p>
+      <p onclick="getAPI(38)">Hadžići</p>
+      <p onclick="getAPI(39)">Han-Pijesak</p>
+      <p onclick="getAPI(40)">Hlivno</p>
+      <p onclick="getAPI(41)">Ilijaš</p>
+      <p onclick="getAPI(42)">Jablanica</p>
+      <p onclick="getAPI(43)">Jajce</p>
+      <p onclick="getAPI(44)">Kakanj</p>
+      <p onclick="getAPI(45)">Kalesija</p>
+      <p onclick="getAPI(46)">Kalinovik</p>
+      <p onclick="getAPI(47)">Kiseljak</p>
+      <p onclick="getAPI(48)">Kladanj</p>
+      <p onclick="getAPI(49)">Ključ</p>
+      <p onclick="getAPI(50)">Konjic</p>
+      <p onclick="getAPI(51)">Kotor-Varoš</p>
+      <p onclick="getAPI(52)">Kreševo</p>
+      <p onclick="getAPI(53)">Kupres</p>
+      <p onclick="getAPI(54)">Laktaši</p>
+      <p onclick="getAPI(55)">Lopare</p>
+      <p onclick="getAPI(56)">Lukavac</p>
+      <p onclick="getAPI(57)">Ljubinje</p>
+      <p onclick="getAPI(58)">Ljubuški</p>
+      <p onclick="getAPI(59)">Maglaj</p>
+      <p onclick="getAPI(60)">Modriča</p>
+      <p onclick="getAPI(61)">Mostar</p>
+      <p onclick="getAPI(62)">Mrkonjić-Grad</p>
+      <p onclick="getAPI(63)">Neum</p>
+      <p onclick="getAPI(64)">Nevesinje</p>
+      <p onclick="getAPI(65)">Novi Travnik</p>
+      <p onclick="getAPI(66)">Odžak</p>
+      <p onclick="getAPI(67)">Olovo</p>
+      <p onclick="getAPI(68)">Orašje</p>
+      <p onclick="getAPI(69)">Pale</p>
+      <p onclick="getAPI(70)">Posušje</p>
+      <p onclick="getAPI(71)">Prijedor</p>
+      <p onclick="getAPI(72)">Prnjavor</p>
+      <p onclick="getAPI(73)">Prozor</p>
+      <p onclick="getAPI(74)">Rogatica</p>
+      <p onclick="getAPI(75)">Rudo</p>
+      <p onclick="getAPI(76)">Sanski Most</p>
+      <p onclick="getAPI(77)">Sarajevo</p>
+      <p onclick="getAPI(78)">Skender-Vakuf</p>
+      <p onclick="getAPI(79)">Sokolac</p>
+      <p onclick="getAPI(80)">Srbac</p>
+      <p onclick="getAPI(81)">Srebrenica</p>
+      <p onclick="getAPI(82)">Srebrenik</p>
+      <p onclick="getAPI(83)">Stolac</p>
+      <p onclick="getAPI(84)">Šekovići</p>
+      <p onclick="getAPI(85)">Šipovo</p>
+      <p onclick="getAPI(86)">Široki Brijeg</p>
+      <p onclick="getAPI(87)">Teslić</p>
+      <p onclick="getAPI(88)">Tešanj</p>
+      <p onclick="getAPI(89)">Tomislav-Grad</p>
+      <p onclick="getAPI(90)">Travnik</p>
+      <p onclick="getAPI(91)">Trebinje</p>
+      <p onclick="getAPI(92)">Trnovo</p>
+      <p onclick="getAPI(93)">Tuzla</p>
+      <p onclick="getAPI(94)">Ugljevik</p>
+      <p onclick="getAPI(95)">Vareš</p>
+      <p onclick="getAPI(96)">Velika Kladuša</p>
+      <p onclick="getAPI(97)">Visoko</p>
+      <p onclick="getAPI(98)">Višegrad</p>
+      <p onclick="getAPI(99)">Vitez</p>
+      <p onclick="getAPI(100)">Vlasenica</p>
+      <p onclick="getAPI(101)">Zavidovići</p>
+      <p onclick="getAPI(102)">Zenica</p>
+      <p onclick="getAPI(103)">Zvornik</p>
+      <p onclick="getAPI(104)">Žepa</p>
+      <p onclick="getAPI(105)">Žepče</p>
+      <p onclick="getAPI(106)">Živinice</p>
+      <p onclick="getAPI(107)">Bijelo Polje</p>
+      <p onclick="getAPI(108)">Gusinje</p>
+      <p onclick="getAPI(109)">Nova Varoš</p>
+      <p onclick="getAPI(110)">Novi Pazar</p>
+      <p onclick="getAPI(111)">Plav</p>
+      <p onclick="getAPI(112)">Pljevlja</p>
+      <p onclick="getAPI(113)">Priboj</p>
+      <p onclick="getAPI(114)">Prijepolje</p>
+      <p onclick="getAPI(115)">Rožaje</p>
+      <p onclick="getAPI(116)">Sjenica</p>
+      <p onclick="getAPI(117)">Tutin</p>
+   </div>
+
+   <!-- Info Box -->
+   <div class="info">
+      <div class="tile">
+         <p class="info-top" id="info-city-name"></p>
+         <p class="info-bottom" id="info-date"></p>
+      </div>
+   </div>
+
+   <!-- Salat Boxes -->
+   <!-- 1 -->
+   <div class="salat">
+      <div class="tile salat-tile">
+         <div class="salat-left">
+            <p>Zora</p>   
+         </div>
+         <div class="salat-right">
+            <p class="salat-times">--:--</p>
+            <p class="salat-relative-times">--h i --m</p>
+         </div>
+      </div>
+   </div>
+   <!-- 2 -->
+   <div class="salat">
+      <div class="tile salat-tile">
+         <div class="salat-left">
+            <p>Svitanje</p>   
+         </div>
+         <div class="salat-right">
+            <p class="salat-times">--:--</p>
+            <p class="salat-relative-times">--h i --m</p>
+         </div>
+      </div>
+   </div>
+   <!-- 3 -->
+   <div class="salat">
+      <div class="tile salat-tile">
+         <div class="salat-left">
+            <p id="dzuma-title">Podne</p>   
+         </div>
+         <div class="salat-right">
+            <p class="salat-times">--:--</p>
+            <p class="salat-relative-times">--h i --m</p>
+         </div>
+      </div>
+   </div>
+   <!-- 4 -->
+   <div class="salat">
+      <div class="tile salat-tile">
+         <div class="salat-left">
+            <p>Ikindija</p>   
+         </div>
+         <div class="salat-right">
+            <p class="salat-times">--:--</p>
+            <p class="salat-relative-times">--h i --m</p>
+         </div>
+      </div>
+   </div>
+   <!-- 5 -->
+   <div class="salat">
+      <div class="tile salat-tile">
+         <div class="salat-left">
+            <p>Akšam</p>   
+         </div>
+         <div class="salat-right">
+            <p class="salat-times">--:--</p>
+            <p class="salat-relative-times">--h i --m</p>
+         </div>
+      </div>
+   </div>
+   <!-- 6 -->
+   <div class="salat">
+      <div class="tile salat-tile">
+         <div class="salat-left">
+            <p>Jacija</p>   
+         </div>
+         <div class="salat-right">
+            <p class="salat-times">--:--</p>
+            <p class="salat-relative-times">--h i --m</p>
+         </div>
+      </div>
+   </div>
+
+   <!-- Footer -->
+   <footer>
+      <!-- Notice -->
+      <a href="obavijest.html" target="_blank">
+         <svg viewBox="0 0 16 16">
+            <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+         </svg>
+      </a>
+      <!-- API -->
+      <a href="https://api.vaktija.ba/vaktija/v1" target="_blank">
+         <svg viewBox="0 0 512 512">
+            <path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>
+         </svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/BakirGracic/vaktija" target="_blank">
+         <svg viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+         </svg>
+      </a>
+      <!-- Discord -->
+      <a href="https://discord.com/users/616736736277430448/" target="_blank">
+         <svg viewBox="0 0 16 16">
+            <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/>
+            <path d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"/>
+         </svg>
+      </a>
+      <!-- Email -->
+      <a href="mailto:bakir_gracic@outlook.com" target="_blank">
+         <svg viewBox="0 0 512 512">
+            <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/>
+         </svg>
+      </a>
+   </footer>
+
+   <!-- JavaScript -->
+   <script src="js/jquery-min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>

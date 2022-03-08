@@ -1,0 +1,44 @@
+.salat {
+   margin: 1rem;
+   .tile {
+      display: flex;
+      align-items: center;
+      .salat-left {
+         width: 40%;
+         p {
+            font-size: 3rem;
+         }
+      }
+      .salat-right {
+         width: 60%;
+         text-align: right;
+         .salat-times {
+            font-size: 2.5rem;
+         }
+         .salat-relative-times {
+            font-weight: 300;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+   .salat {
+      margin: .7rem;
+      .tile {
+         .salat-left {
+            p {
+               font-size: 2rem;
+            }
+         }
+         .salat-right {
+            .salat-times {
+               font-size: 1.9rem;
+            }
+            .salat-relative-times {
+               font-size: .9rem;
+            }
+         }
+      }
+   }
+}

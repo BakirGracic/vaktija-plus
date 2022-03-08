@@ -1,0 +1,13 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   outline: none;
+}
+
+html {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   font-family: "Roboto-Local";
+   font-size: 20px;
+}
