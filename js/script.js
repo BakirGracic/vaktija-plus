@@ -23,8 +23,7 @@ function setRelativeTime(timeDelta, currentSalatIndex, settingSalatIndex) {
    let m = Math.floor((timeDelta % (1000 * 60 * 60)) / (1000 * 60));
    let hB = (23-h);
    let mB = (59-m);
-   
-   // PRIJE i TRENUTNO
+
    if(settingSalatIndex <= (currentSalatIndex-1)) {
       if(hB==0 && mB==0) {
          str += "prije par sekundi";
@@ -39,7 +38,6 @@ function setRelativeTime(timeDelta, currentSalatIndex, settingSalatIndex) {
          str += `prije ${hB}h i ${mB}m`;
       }
    }
-   // POSLIJE
    else if(settingSalatIndex > (currentSalatIndex-1)) {
       if(h==0 && m==0) {
          str += "za par sekundi";

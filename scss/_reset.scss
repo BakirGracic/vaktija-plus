@@ -18,6 +18,9 @@ img, svg {
 *::selection {
    background: #989a13;
 }
+.current-salat::selection {
+   background: white;
+}
 svg {
    cursor: pointer;
    transition: fill 75ms ease-in-out;
