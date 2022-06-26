@@ -1,0 +1,27 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+html {
+   font-family: "Roboto-Local";
+   color: #e0e0e0;
+   background-color: #333333;
+}
+img, svg {
+   display: block;
+}
+*::-moz-selection {
+   background: #989a13;
+}
+*::selection {
+   background: #989a13;
+}
+svg {
+   cursor: pointer;
+   transition: fill 75ms ease-in-out;
+}
+svg:hover {
+   fill: #989a13;
+}
