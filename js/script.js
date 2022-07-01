@@ -89,7 +89,7 @@ function update(json) {
 
    // Checkers
    if(nowHour === 0 && nowMinute === 0 && nowSecond === 1) { location.reload(); }
-   else if(nowDay === 5) { dzuma_title.text("Džuma"); }
+   else if(nowDay === 5) { $(".dzuma-title").text("Džuma"); }
 }
 
 // Get API data
