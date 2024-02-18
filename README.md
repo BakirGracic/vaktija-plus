@@ -1,2 +1,3 @@
-# vaktija
-v2 in construction
+# vaktija-plus
+Coming soon
+Original: [vaktija.ba](https://vaktija.ba)
